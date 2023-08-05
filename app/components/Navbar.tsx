@@ -71,21 +71,18 @@ export function Navbar() {
     },
 
     {
-      link: "/create-resume-website",
-      label: "Create Resume",
+      link: "/create-message",
+      label: "Create Message",
     },
     {
-      link: "/view-demo",
-      label: "Demo",
+      link: "/message-read",
+      label: "View Message",
     },
     {
-      link: "/learn",
-      label: "Learn",
+      link: "/how-to-use",
+      label: "How To Use",
     },
-    {
-      link: "/community",
-      label: "Community",
-    },
+    
   ];
 
   const [opened, { toggle, close }] = useDisclosure(false);

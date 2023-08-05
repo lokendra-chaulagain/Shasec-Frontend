@@ -8,8 +8,8 @@ import LinkedinIcon from "./icons/LinkedinIcon";
 
 export function Footer() {
   return (
-    <footer className=" border-t text-gray-600 md:px-8 py-2 mt-20">
-      <div className="flex flex-col items-center justify-between lg:flex-row max-w-screen-xl mx-auto px-4">
+    <footer className=" border-t text-gray-600  py-2 mt-20">
+      <div className="flex items-center justify-between h-full max-w-screen-xl mx-auto px-4  text-gray-600 md:px-8">
         <Image
           src={logo2}
           className=" w-20"
@@ -26,13 +26,19 @@ export function Footer() {
           spacing={0}
           position="right"
           noWrap>
-          <ActionIcon size="lg" className=" hover:bg-indigo-100">
+          <ActionIcon
+            size="lg"
+            className=" hover:bg-indigo-100">
             <GithubIcon />
           </ActionIcon>
-          <ActionIcon size="lg" className=" hover:bg-indigo-100">
+          <ActionIcon
+            size="lg"
+            className=" hover:bg-indigo-100">
             <TwitterIcon />
           </ActionIcon>
-          <ActionIcon size="lg" className=" hover:bg-indigo-100">
+          <ActionIcon
+            size="lg"
+            className=" hover:bg-indigo-100">
             <LinkedinIcon />
           </ActionIcon>
         </Group>
