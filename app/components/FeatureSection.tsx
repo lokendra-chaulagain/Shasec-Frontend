@@ -6,7 +6,7 @@ export default function FeatureSection() {
       <div className=" max-w-6xl ">
         <div className="flex flex-col items-center  ">
           <h2 className="text-3xl font-bold sm:text-4xl">What makes us special</h2>
-          <p className="mt-4  text-center max-w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolores iure fugit totam iste obcaecati. Consequatur ipsa quod ipsum sequi culpa delectus, cumque id tenetur quibusdam, quos fuga minima.</p>
+          <p className="mt-4  text-center max-w-2xl">Experience secure sharing, password-protected access, auto-deletion. User-friendly and encrypted for confidential communication. Share secret messages with ease, making us special in the digital world.</p>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
@@ -29,9 +29,9 @@ export default function FeatureSection() {
             </span>
 
             <div>
-              <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+              <h2 className="text-lg font-bold">Secure Message Sharing</h2>
 
-              <p className="mt-1 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab possimus quisquam reiciendis tempora animi! Quaerat, saepe?</p>
+              <p className="mt-1 text-base text-gray-500">Users can encrypt secret messages with passwords and generate unique URLs to share privately.</p>
             </div>
           </div>
 
@@ -54,9 +54,9 @@ export default function FeatureSection() {
             </span>
 
             <div>
-              <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+              <h2 className="text-lg font-bold">Password-Protected Access</h2>
 
-              <p className="mt-1 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab possimus quisquam reiciendis tempora animi! Quaerat, saepe?</p>
+              <p className="mt-1 text-base text-gray-500">LRecipients need the password to access and read the encrypted message via the shared URL.</p>
             </div>
           </div>
 
@@ -79,9 +79,9 @@ export default function FeatureSection() {
             </span>
 
             <div>
-              <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+              <h2 className="text-lg font-bold">Self-Destructing Messages</h2>
 
-              <p className="mt-1 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab possimus quisquam reiciendis tempora animi! Quaerat, saepe?</p>
+              <p className="mt-1 text-base text-gray-500">Messages are automatically deleted after 3 days for enhanced security and privacy.</p>
             </div>
           </div>
 
@@ -104,9 +104,9 @@ export default function FeatureSection() {
             </span>
 
             <div>
-              <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+              <h2 className="text-lg font-bold">End-to-End Encryption</h2>
 
-              <p className="mt-1 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab possimus quisquam reiciendis tempora animi! Quaerat, saepe?</p>
+              <p className="mt-1 text-base text-gray-500">The application ensures the message remains encrypted from sender to recipient.</p>
             </div>
           </div>
 
@@ -129,9 +129,9 @@ export default function FeatureSection() {
             </span>
 
             <div>
-              <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+              <h2 className="text-lg font-bold">Confidential Communication</h2>
 
-              <p className="mt-1 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab possimus quisquam reiciendis tempora animi! Quaerat, saepe?</p>
+              <p className="mt-1 text-base text-gray-500">Enable confidential conversations without leaving traces after the message is deleted.</p>
             </div>
           </div>
 
@@ -154,9 +154,9 @@ export default function FeatureSection() {
             </span>
 
             <div>
-              <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+              <h2 className="text-lg font-bold">User-Friendly Interface</h2>
 
-              <p className="mt-1 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab possimus quisquam reiciendis tempora animi! Quaerat, saepe?</p>
+              <p className="mt-1 text-base text-gray-500">Easy-to-use interface for seamless message encryption, sharing, and decryption.</p>
             </div>
           </div>
         </div>

@@ -28,11 +28,11 @@ export default function HeroSection() {
     <section className="flex h-screen justify-center items-center px-4 text-gray-600 ">
       <div className=" max-w-6xl ">
         <div className=" text-center">
-          <h1 className=" text-3xl xl:text-5xl font-extrabold text-center">
-            Understand User Flow and Increase <br /> Conversion
+          <h1 className=" text-3xl xl:text-5xl font-extrabold text-center" style={{lineHeight:"65px"}}>
+          Secure Message Sharing Made Easy  <br /> Protect, Share, and Forget!
           </h1>
 
-          <p className="mx-auto mt-4 max-w-xl ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</p>
+          <p className="mx-auto mt-4 max-w-xl ">"Securely encrypt and share secret messages with auto-delete feature using unique URLs and password protection."</p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
@@ -50,7 +50,7 @@ export default function HeroSection() {
 
           <div className="flex justify-center gap-5">
             <div className="flex flex-col  py-8 text-center">
-              <dt className="order-last text-xs font-medium ">Message Created Till Now</dt>
+              <dt className="order-last text-xs font-medium ">Secret Messages Created Till Now</dt>
               {msgCount ? (
                 <dd className=" text-sm font-bold text-blue-500 ">{msgCount}</dd>
               ) : (
