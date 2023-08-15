@@ -9,10 +9,10 @@ import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Shasec",
-  description: "share secure messages",
-};
+// export const metadata: Metadata = {
+//   title: "Shasec",
+//   description: "share secure messages",
+// };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const path = usePathname();
