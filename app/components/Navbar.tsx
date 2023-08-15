@@ -225,7 +225,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function Navbar() {
+export default function Navbar() {
   const links = [
     {
       link: "/",
