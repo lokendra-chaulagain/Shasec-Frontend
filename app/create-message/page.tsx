@@ -61,8 +61,8 @@ export default function Page() {
     <div className="flex justify-center px-4 mt-20  ">
       <div className="flex flex-col gap-4 max-w-6xl ">
         <div className="flex text-gray-600 flex-col items-center justify-center">
-          <h3 className=" text-3xl font-bold ">Creating Secure Messages</h3>
-          <p className="mt-2 max-w-2xl text-center ">Compose your confidential message and choose to encrypt it with a password. Set the expiration date or use the default 3-day auto-delete feature for enhanced privacy.</p>
+          <h3 className=" text-3xl font-bold text-center ">Creating Secure Messages</h3>
+          <p className="mt-2 max-w-2xl  md:text-center ">Compose your confidential message and choose to encrypt it with a password. Set the expiration date or use the default 3-day auto-delete feature for enhanced privacy.</p>
         </div>
 
         <div>
