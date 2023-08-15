@@ -53,8 +53,8 @@ export default function Page() {
     <div className="flex justify-center px-4 mt-20  ">
       <div className="flex flex-col max-w-6xl ">
         <div className="flex text-gray-600 flex-col items-center justify-center">
-          <h3 className=" text-3xl font-bold "> Secure Message Retrieval</h3>
-          <p className="mt-2 max-w-2xl text-center ">
+          <h3 className=" text-3xl font-bold text-center "> Secure Message Retrieval</h3>
+          <p className="mt-2 max-w-2xl md:text-center ">
             {" "}
             <span className=" text-yellow-600 font-semibold">Note:</span> Enter the URL and click search to retrieve your message. If encrypted, enter the password for decryption. Enjoy hassle-free access to your messages without a password if they are unencrypted.
           </p>
