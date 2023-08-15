@@ -4,7 +4,6 @@ import React, { useState } from "react";
 
 export default function Page() {
   const [value, setValue] = useState("login");
-  console.log(value);
 
   return (
     <div className=" mt-52 flex justify-center items-center">

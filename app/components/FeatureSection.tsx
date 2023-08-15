@@ -59,9 +59,9 @@ export default function FeatureSection() {
                 stroke="currentColor"
                 className="h-5 w-5">
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M12 2v2m0 10.75A7.1 7.1 0 0114.85 9M5.6 16.2a9 9 0 0112.8-12.8M2 12h2m10 0h2m-5 5v2m0-10v2"
                 />
               </svg>
@@ -99,9 +99,9 @@ export default function FeatureSection() {
                 stroke="currentColor"
                 className="h-5 w-5">
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M12 2C6.48 2 2 6.48 2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6c0-5.52-4.48-10-10-10zm0 4a2 2 0 012 2v2h-4v-2a2 2 0 012-2zm-2 10h4v-2H7v2z"
                 />
               </svg>
@@ -122,9 +122,9 @@ export default function FeatureSection() {
                 stroke="currentColor"
                 className="h-5 w-5">
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-1.5 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm3 5h-6a1 1 0 100 2h6a1 1 0 100-2zm-3 4a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"
                 />
               </svg>

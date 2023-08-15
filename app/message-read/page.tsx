@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Input, Loader, PasswordInput } from "@mantine/core";
 import toast from "react-hot-toast";
 
@@ -13,41 +13,53 @@ export default function Page() {
   const [message, setMessage] = useState<string>("");
   const [isPasswordRequired, setIsPasswordRequired] = useState(false);
 
-  const getMessage = async (e: any) => {
+  const getMessage = async (e: React.FormEvent) => {
     e.preventDefault();
+
     try {
       setIsLoading(true);
-      console.log(url, password);
+      let apiUrl = `${process.env.NEXT_PUBLIC_URL}/messages/${id}`;
 
-      let apiUrl = `http://localhost:4000/api/messages/${id}`;
       if (password.length >= 5) {
         apiUrl += `/${password}`;
       }
 
       const res = await axios.get(apiUrl);
-      // const res = await messageRepository.get(id);
       setMessage(res.data.data.message);
       setIsLoading(false);
-      toast.success(res.data.message);
     } catch (error: any) {
-      console.log(error.message);
       setIsLoading(false);
-      if (error.response && error.response.status === 401) {
-        setIsPasswordRequired(true);
-        if (error.response.data && error.response.data.message === "Password is required to access this message.") {
-          toast.error("Password is required to access this message.");
+
+      if (error.response) {
+        if (error.response.status === 401) {
+          setIsPasswordRequired(true);
+
+          if (error.response.data && error.response.data.message === "Password is required to access this message.") {
+            setPasswordWarning(true);
+          } else {
+            toast.error("Unauthorized! Invalid password for this message.");
+          }
+        } else if (error.response.status === 404) {
+          toast.error("Message not found.");
         } else {
-          toast.error("Unauthorized! Invalid password for this message.");
+          toast.error("An error occurred. Please try again later.");
         }
-      } else if (error.response && error.response.status === 404) {
-        toast.error("Message not found.");
-        setIsPasswordRequired(true);
-      } else {
-        setIsPasswordRequired(true);
-        toast.error("An error occurred. Please try again later.");
       }
     }
   };
+
+  const [passwordWarning, setPasswordWarning] = useState<boolean>(false);
+  useEffect(() => {
+    if (passwordWarning) {
+      const timeoutId = setTimeout(() => {
+        setPasswordWarning(false);
+      }, 5000);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+  }, [passwordWarning]);
 
   return (
     <div className="flex justify-center px-4 mt-20  ">
@@ -59,6 +71,14 @@ export default function Page() {
             <span className=" text-yellow-600 font-semibold">Note:</span> Enter the URL and click search to retrieve your message. If encrypted, enter the password for decryption. Enjoy hassle-free access to your messages without a password if they are unencrypted.
           </p>
         </div>
+
+        {passwordWarning && isPasswordRequired && (
+          <div
+            className="p-4 mt-5 text-sm text-yellow-800 rounded-lg text-center bg-yellow-100  "
+            role="alert">
+            <span className="font-medium">Warning alert!</span> This message is encrypted , so please enter password to decrypt it.
+          </div>
+        )}
 
         <form
           onSubmit={getMessage}

@@ -15,7 +15,6 @@ export default function HeroSection() {
       res && setmsgCount(res.data.count);
       res && setIsLoading(false);
     } catch (error) {
-      console.log(error);
       setIsLoading(false);
     }
   };

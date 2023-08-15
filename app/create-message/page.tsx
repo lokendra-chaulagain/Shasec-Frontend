@@ -35,19 +35,17 @@ export default function Page() {
         expirationDate,
       });
       if (res) {
-        setGeneratedUrl(`http://localhost:4000/secret-message/${res.data.id}`);
+        setGeneratedUrl(`${process.env.NEXT_PUBLIC_URL}/${res.data.id}`);
         setisLoading(false);
         setpassword("");
         setexpirationDate("");
         toast.success(res.data.message);
       }
     } catch (error) {
-      console.log(error);
       setisLoading(false);
       toast.error("Something went wrong");
     }
   };
-  console.log(generatedUrl);
 
   const generateRandomPassword = () => {
     var password = generator.generate({
