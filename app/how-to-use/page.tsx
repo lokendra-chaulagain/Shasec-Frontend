@@ -37,7 +37,7 @@ export default function page() {
           <p className="">Receiving a shared message? Simply enter the URL and click search. If the message is encrypted, our platform will prompt you to enter the correct password for decryption. No password required? Dive straight into the confidential content.</p>
         </div>
 
-        <div className="  mb-12">
+        <div className="  ">
           <h2 className="text-xl font-bold mb-2">Learn How to Safeguard Your Conversations: Blog Post - Tips and Tricks</h2>
           <p className="">In this blog post, we'll guide you through utilizing our platform's exceptional features. From secure message sharing to password protection, we'll help you harness the full potential of our application, ensuring your sensitive information remains confidential and well-protected.</p>
 
