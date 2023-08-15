@@ -25,7 +25,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="flex h-screen justify-center items-center px-4 text-gray-600 mt-5 sm-mt-0">
+    <section className="flex h-screen justify-center items-center px-4 text-gray-600 mt-1 sm-mt-0">
       <div className=" max-w-6xl ">
         <div className=" text-center">
           <h1
