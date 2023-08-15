@@ -2,7 +2,7 @@
 import { Anchor, Button, Checkbox, Container, Group, Paper, PasswordInput, SegmentedControl, TextInput, Title } from "@mantine/core";
 import React, { useState } from "react";
 
-export default function page() {
+export default function Page() {
   const [value, setValue] = useState("login");
   console.log(value);
 

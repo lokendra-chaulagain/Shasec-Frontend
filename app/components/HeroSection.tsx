@@ -1,8 +1,8 @@
 "use client";
 import { Loader } from "@mantine/core";
-import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { messageRepository } from "../repository";
 
 export default function HeroSection() {
   const [msgCount, setmsgCount] = useState<number>();
@@ -11,9 +11,9 @@ export default function HeroSection() {
   const getTotalMessageCount = async () => {
     try {
       setIsLoading(true);
-      const res = await axios.get("http://localhost:4000/api/messages/count");
-      setmsgCount(res.data.count);
-      setIsLoading(false);
+      const res = await messageRepository.count();
+      res && setmsgCount(res.data.count);
+      res && setIsLoading(false);
     } catch (error) {
       console.log(error);
       setIsLoading(false);
@@ -28,8 +28,15 @@ export default function HeroSection() {
     <section className="flex h-screen justify-center items-center px-4 text-gray-600 ">
       <div className=" max-w-6xl ">
         <div className=" text-center">
-          <h1 className=" text-3xl xl:text-5xl font-extrabold text-center" style={{lineHeight:"65px"}}>
-          Secure Message Sharing Made Easy  <br /> Protect, Share, and Forget!
+          <h1
+            className=" text-3xl xl:text-5xl font-extrabold text-center hidden md:block"
+            style={{ lineHeight: "75px" }}>
+            Secure Message Sharing Made Easy <br /> Protect, Share, and Forget!
+          </h1>
+          <h1
+            className=" text-3xl xl:text-5xl font-extrabold text-center block md:hidden"
+            style={{ lineHeight: "50px" }}>
+            Secure Message Sharing Made Easy <br /> Protect, Share, and Forget!
           </h1>
 
           <p className="mx-auto mt-4 max-w-xl ">"Securely encrypt and share secret messages with auto-delete feature using unique URLs and password protection."</p>

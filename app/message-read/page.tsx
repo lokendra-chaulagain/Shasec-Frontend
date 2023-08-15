@@ -1,39 +1,18 @@
 "use client";
-import parse from "html-react-parser";
 import axios from "axios";
 import { useState } from "react";
-import { Button, Input, Loader, Notification, PasswordInput } from "@mantine/core";
-import toast, { Toaster } from "react-hot-toast";
+import { Button, Input, Loader, PasswordInput } from "@mantine/core";
+import toast from "react-hot-toast";
 
-export default function page() {
-  const [mycontent, setmycontent] = useState<string>("");
+export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
   const [url, seturl] = useState<string>("");
   const [password, setpassword] = useState<string>("");
   const id = url.split("/")[4];
 
-  // const getMessage = async (e: any) => {
-  //   e.preventDefault();
-  //   try {
-  //     setIsLoading(true);
-  //     console.log(url, password);
-
-  //     let apiUrl = `http://localhost:4000/api/messages/${id}`;
-  //     if (password.length >= 5) {
-  //       apiUrl += `/${password}`;
-  //     }
-
-  //     const res = await axios.get(apiUrl);
-  //     console.log(res.data.message);
-  //     setmycontent(res.data.content);
-  //     setIsLoading(false);
-  //   } catch (error) {
-  //     console.log(error);
-  //     setIsLoading(false);
-  //   }
-  // };
-
+  const [message, setMessage] = useState<string>("");
   const [isPasswordRequired, setIsPasswordRequired] = useState(false);
+
   const getMessage = async (e: any) => {
     e.preventDefault();
     try {
@@ -46,12 +25,12 @@ export default function page() {
       }
 
       const res = await axios.get(apiUrl);
-      console.log(res.data.message);
-      setmycontent(res.data.content);
+      // const res = await messageRepository.get(id);
+      setMessage(res.data.data.message);
       setIsLoading(false);
-      toast.success("You can read the message now.");
+      toast.success(res.data.message);
     } catch (error: any) {
-      console.log(error);
+      console.log(error.message);
       setIsLoading(false);
       if (error.response && error.response.status === 401) {
         setIsPasswordRequired(true);
@@ -92,12 +71,14 @@ export default function page() {
             placeholder="Enter Your Url"
           />
 
-          {isPasswordRequired && <PasswordInput
-            value={password}
-            onChange={(e: any) => setpassword(e.target.value)}
-            className="w-full"
-            placeholder="Message Password"
-          />}
+          {isPasswordRequired && (
+            <PasswordInput
+              value={password}
+              onChange={(e: any) => setpassword(e.target.value)}
+              className="w-full"
+              placeholder="Message Password"
+            />
+          )}
           <Button
             type="submit"
             className=" bg-blue-500 hover:bg-blue-500">
@@ -106,15 +87,15 @@ export default function page() {
         </form>
 
         <div className="mt-10">
-          {mycontent && <p className="text-center text-gray-600 text-sm font-semibold bg-blue-100">--Start--</p>}
+          {message && <p className="text-center text-gray-600 text-sm font-semibold bg-blue-100">--Start--</p>}
           {isLoading && (
             <div className="flex flex-col justify-center items-center">
               <Loader variant="bars" />
               <p className="text-center text-gray-600 text-sm font-semibold">Please Wait..</p>
             </div>
           )}
-          {mycontent && <p className="">{parse(mycontent)}</p>}
-          {mycontent && <p className="text-center text-gray-600 text-sm font-semibold bg-blue-100">--End--</p>}
+          {message && <p className="">{message}</p>}
+          {message && <p className="text-center text-gray-600 text-sm font-semibold bg-blue-100">--End--</p>}
         </div>
       </div>
     </div>

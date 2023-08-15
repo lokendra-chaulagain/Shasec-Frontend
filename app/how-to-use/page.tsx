@@ -4,8 +4,8 @@ export default function page() {
   return (
     <div className="flex   justify-center px-4 mt-20  ">
       <div className="flex flex-col max-w-6xl text-gray-600 ">
-        <h1 className=" text-3xl xl:text-5xl font-extrabold text-center mb-3">How To Use Secure Message Sharing Feature</h1>
-        <p className=" mb-8 text-center">In today's digital age, privacy and security are paramount. We are thrilled to introduce our revolutionary message sharing platform, designed to ensure the confidentiality of your conversations. With a range of cutting-edge features, we offer seamless and secure communication for users seeking utmost privacy.</p>
+        <h1 className=" text-3xl xl:text-5xl font-extrabold text-center mb-5">How To Use Secure Message Sharing Feature</h1>
+        <p className=" mb-8 ">In today's digital age, privacy and security are paramount. We are thrilled to introduce our revolutionary message sharing platform, designed to ensure the confidentiality of your conversations. With a range of cutting-edge features, we offer seamless and secure communication for users seeking utmost privacy.</p>
 
         <div className="  mb-12">
           <h2 className="text-xl font-bold mb-2">Sharing Secrets, The Safe Way: Secure Message Sharing</h2>

@@ -2,7 +2,7 @@
 
 export default function FeatureSection() {
   return (
-    <section className="flex justify-center px-4 text-gray-600 mb-32">
+    <section className="flex justify-center px-4 text-gray-600 mb:12 md:mb-32">
       <div className=" max-w-6xl ">
         <div className="flex flex-col items-center  ">
           <h2 className="text-3xl font-bold sm:text-4xl">What makes us special</h2>
